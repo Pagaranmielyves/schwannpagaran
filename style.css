@@ -1,0 +1,37 @@
+.medal {
+    width: 100px;
+    height: 150px;
+    background: linear-gradient(45deg, #ffd700, #cd7f32, #ffd700);
+    border-radius: 50%;
+    position: relative;
+    animation: spin 2s linear infinite;
+}
+
+.medal::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #ffd700;
+    top: -60px;
+    left: 0;
+}
+
+.medal::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #cd7f32;
+    border-radius: 50%;
+    top: 70px;
+    left: 40px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
